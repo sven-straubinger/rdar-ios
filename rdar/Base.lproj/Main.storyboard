@@ -38,7 +38,13 @@
                         <viewLayoutGuide key="safeArea" id="BFR-C5-J7t"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="f49-ys-jYB"/>
-                    <navigationItem key="navigationItem" id="PrG-JW-zux"/>
+                    <navigationItem key="navigationItem" id="PrG-JW-zux">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="BnF-4z-aiE">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="PIV-Tx-iLY" id="aXp-TT-zFF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oN4-vf-3ew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
