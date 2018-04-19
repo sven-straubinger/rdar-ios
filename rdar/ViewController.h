@@ -6,10 +6,8 @@
 //  Copyright © 2018 Sven Straubinger. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface ViewController : UIViewController
 
-
 @end
-
