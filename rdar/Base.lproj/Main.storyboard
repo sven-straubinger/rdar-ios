@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PpJ-sZ-LfZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PIV-Tx-iLY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,23 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="DUV-Mr-7Mn">
-            <objects>
-                <navigationController id="q81-Hv-DvD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QPL-Hs-Pvj"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yws-fY-k8Y">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="PIV-Tx-iLY" kind="relationship" relationship="rootViewController" id="dFS-n3-quM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1WK-bX-PKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="17" y="825"/>
-        </scene>
         <!--Item 1-->
         <scene sceneID="twT-nC-ZBq">
             <objects>
@@ -34,7 +17,68 @@
                     <view key="view" contentMode="scaleToFill" id="aRp-NW-DEP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVm-KN-fy6">
+                                <rect key="frame" x="142" y="318" width="90" height="30"/>
+                                <state key="normal" title="Present Alert"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="PIV-Tx-iLY" eventType="touchUpInside" id="twa-ZO-WCy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvZ-tG-dRA">
+                                <rect key="frame" x="20" y="584.5" width="335" height="62.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You can see the globe icon flying by when tapping the alert button. It seems to appear only on the ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="iPhone X Simulator">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" without visible software keyboard">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". Tested and reproduced with ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Xcode Version 9.3 (9E145)">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dVm-KN-fy6" firstAttribute="centerY" secondItem="aRp-NW-DEP" secondAttribute="centerY" id="EgJ-jb-dsi"/>
+                            <constraint firstAttribute="trailing" secondItem="dvZ-tG-dRA" secondAttribute="trailing" constant="20" id="WFN-BB-0jl"/>
+                            <constraint firstItem="dVm-KN-fy6" firstAttribute="centerX" secondItem="aRp-NW-DEP" secondAttribute="centerX" id="tl4-HP-s9E"/>
+                            <constraint firstItem="dvZ-tG-dRA" firstAttribute="leading" secondItem="BFR-C5-J7t" secondAttribute="leading" constant="20" id="xIm-GU-NxE"/>
+                            <constraint firstItem="BFR-C5-J7t" firstAttribute="bottom" secondItem="dvZ-tG-dRA" secondAttribute="bottom" constant="20" id="xh9-uq-ZKd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BFR-C5-J7t"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="f49-ys-jYB"/>
@@ -49,23 +93,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oN4-vf-3ew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1036" y="824"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="8LJ-bA-gQd">
-            <objects>
-                <tabBarController id="PpJ-sZ-LfZ" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ofa-jj-y6J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="q81-Hv-DvD" kind="relationship" relationship="viewControllers" id="0CN-NB-IuV"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qD1-LQ-9Yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1057" y="826"/>
         </scene>
     </scenes>
 </document>
